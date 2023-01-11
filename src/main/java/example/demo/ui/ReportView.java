@@ -1,4 +1,4 @@
-package example.demo.ui.reportView;
+package example.demo.ui;
 
 import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -8,7 +8,6 @@ import com.vaadin.flow.server.StreamResource;
 import example.demo.backend.entity.Person;
 
 import example.demo.backend.services.PersonService;
-import example.demo.ui.MainLayout;
 import org.vaadin.reports.PrintPreviewReport;
 
 

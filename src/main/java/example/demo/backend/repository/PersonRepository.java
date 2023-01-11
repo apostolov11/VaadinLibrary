@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PersonRepository extends JpaRepository<Person,Long> {
+public interface PersonRepository extends JpaRepository<Person, Integer> {
 
 
     @Query("select p from Person p " +

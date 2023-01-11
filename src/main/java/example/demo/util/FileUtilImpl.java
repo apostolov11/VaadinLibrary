@@ -15,11 +15,8 @@ public class FileUtilImpl implements FileUtil {
         File file = new File(pathFile);
 
         BufferedReader bf = new BufferedReader(new FileReader(file));
-
         List<String> fileInfo = new ArrayList<>();
-
         String line = bf.readLine();
-
         while (line != null) {
             fileInfo.add(line);
             line = bf.readLine();

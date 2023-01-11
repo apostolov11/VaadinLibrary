@@ -24,7 +24,7 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
 
         login.setAction("login"); // It will post the login to the path login, that's what we're going to setup in Spring Security
         add(
-                new H1("Vaadin CRM"),
+                new H1("Vaadin Library"),
                 login
         );
 

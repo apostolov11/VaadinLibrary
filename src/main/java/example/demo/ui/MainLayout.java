@@ -11,13 +11,11 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.HighlightConditions;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.PWA;
-import example.demo.ui.reportView.ReportView;
-import example.demo.ui.todoList.TodoListView;
 import example.demo.ui.view.list.ListView;
 
 @PWA(
-        name = "Vaadin CRM",
-        shortName = "VCRM"
+        name = "Vaadin Library",
+        shortName = "VL"
 )
 @CssImport("./styles/shared-styles.css")
 public class MainLayout extends AppLayout {
@@ -30,18 +28,19 @@ public class MainLayout extends AppLayout {
 
     private void createDrawer() {
         RouterLink list = new RouterLink("List", ListView.class);
-        RouterLink todoList = new RouterLink("TodoList", TodoListView.class);
+        RouterLink todoList = new RouterLink("Reminder", TodoListView.class);
         RouterLink report = new RouterLink("Report", ReportView.class);
+        RouterLink book = new RouterLink("Books", BookView.class);
 
         list.setHighlightCondition(HighlightConditions.sameLocation());
 
-        addToDrawer(new VerticalLayout(list, report, todoList));
+        addToDrawer(new VerticalLayout(list, report, todoList, book));
 
     }
 
 
     private void createHeader() {
-        H1 logo = new H1("Vaadin CRM");
+        H1 logo = new H1("Library");
         logo.addClassName("logo"); // adding addClassName so we can access it from CSS
 
         Anchor logout = new Anchor("/logout", "Log out");
